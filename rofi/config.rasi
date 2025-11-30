@@ -1,0 +1,156 @@
+// vim: fdm=marker
+
+configuration {
+  modes: "window,drun,run,ssh";
+  font: "FOT-Rodin Pro DB 16";
+  drun-display-format: "{name}";
+  kb-cancel: "Escape,Alt_L+Shift_R+F2";
+}
+
+* {
+  // general
+  bg: #303030;
+  bgt: #30303099;
+  t: transparent;
+  fg: #dcdedd;
+  sr: #dcdedd;
+
+  selected-bg: @fg;
+  selected-fg: @bg;
+
+  // for windows
+  active: #a9b665;
+  urgent: #fb4934;
+}
+
+window {
+  /*fullscreen: true;*/
+  width: 500px;
+  height: 750px;
+  padding: 0px;  //disable for fullscreen
+  /*enable for fullscreen padding: 30% 25%;*/
+  transparency: "real";
+  background-color: @bgt;
+  border-color: @t;
+  border-radius: 10px;
+  x-offset: -625px;
+  y-offset: -347px;
+}
+
+listview {
+  border: 0 0 0 0;
+  padding: 15 15 10 15;
+}
+
+scrollbar {
+    width:        0px;
+    border:       0;
+    handle-color: @fg;
+    handle-width: 0px;
+    padding:      0 0;
+}
+
+entry {
+    placeholder: "";
+}
+
+// less interesting stuff {{{
+
+// using elements from:
+// https://github.com/bardisty/gruvbox-rofi/blob/master/gruvbox-common.rasi
+
+textbox {
+    text-color: @fg;
+}
+
+element {
+    border:  0;
+    padding: 12px;
+    border-radius: 30px;
+}
+element.normal.normal {
+    background-color: @t;
+    text-color:       @fg; 
+}
+element.normal.urgent {
+    background-color: @t;
+    text-color:       @urgent;
+}
+element.normal.active {
+    background-color: @t;
+    text-color:       @active;
+}
+element.selected.normal {
+    background-color: @selected-bg;
+    text-color:       @selected-fg;
+}
+element.selected.urgent {
+    background-color: @selected-bg;
+    text-color:       @urgent;
+}
+element.selected.active {
+    background-color: @selected-bg;
+    text-color:       @selected-fg;
+}
+element.alternate.normal {
+    background-color: @t;
+    text-color:       @fg;
+}
+element.alternate.urgent {
+    background-color: @t;
+    text-color:       @urgent;
+}
+element.alternate.active {
+    background-color: @t;
+    text-color:       @active;
+}
+
+sidebar {
+    border:       0px 0 0;
+    border-color: @fg;
+}
+
+inputbar {
+    spacing:    10px;
+    text-color: @sr;
+    padding:    70px 65px 70px 152px;
+    background-image: url("~/.config/rofi/lunar.jpg", width);
+    background-color:transparent;
+    //children:   [ icon-search, textbox-prompt-sep, entry, case-indicator ];
+    children:   [ entry ];
+}
+icon-search {
+    expand: false;
+    filename: "search-symbolic";
+    size: 32px;
+}
+case-indicator,
+entry{
+    enabled: true;
+    //expand: true;
+    padding: 12px 16px 12px 16px;
+    border-radius: 100%;
+    background-color: @bgt;
+    text-color: @fg;
+    cursor: text;
+    placeholder: "It always ends like this.";
+    placeholder-color: @fg;
+} 
+prompt,
+button {
+    spacing:    0;
+    text-color: @fg;
+}
+
+button.selected {
+    background-color: @bg;
+    text-color:       @fg;
+}
+
+textbox-prompt-sep {
+    expand:     false;
+    str:        " : ";
+    text-color: @sr;
+    margin:     0 0.3em 0 0;
+}
+// }}}
