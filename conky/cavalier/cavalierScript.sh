@@ -12,7 +12,7 @@ if [ -z "$WINDOW_ID" ]; then
     done
 fi
 
-xdotool windowsize "$WINDOW_ID" 260 285
-xdotool windowmove "$WINDOW_ID" 24 322
+xdotool windowsize "$WINDOW_ID" 260 305
+xdotool windowmove "$WINDOW_ID" 24 277
 
 xprop -id "$WINDOW_ID" -f _NET_WM_WINDOW_TYPE 32a -set _NET_WM_WINDOW_TYPE _NET_WM_WINDOW_TYPE_DOCK
