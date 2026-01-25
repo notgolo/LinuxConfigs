@@ -265,9 +265,9 @@
       </action>
     </keybind>
     <!-- Take a screenshot of the current window with scrot when Alt+Print are pressed -->
-    <keybind key="A-Print">
+    <keybind key="A-p">
       <action name="Execute">
-        <command>scrot -s</command>
+	      <command>/home/golo/Documents/scrotclip.sh</command>
       </action>
     </keybind>
     <!-- Keybindings for window switching -->
@@ -284,6 +284,12 @@
       <action name="Execute">
         <command>skippy-xd --switch --next</command>
       </action>
+    </keybind>
+    <keybind key="A-w">
+	    <action name="ToggleMaximize"/>
+    </keybind>
+    <keybind key="A-e">
+	    <action name="Iconify"/>
     </keybind>
     <keybind key="A-S-Tab">
       <action name="PreviousWindow">
