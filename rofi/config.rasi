@@ -2,7 +2,7 @@
 
 configuration {
   modes: "window,drun,run,ssh";
-  font: "FOT-Rodin Pro DB 16";
+  font: "FOT-Rodin Pro DB 24";
   drun-display-format: "{name}";
   kb-cancel: "Escape,Alt_L+Shift_R+F2";
 }
@@ -25,16 +25,16 @@ configuration {
 
 window {
   /*fullscreen: true;*/
-  width: 500px;
-  height: 750px;
+  width: 650px;
+  height: 1000px;
   padding: 0px;  //disable for fullscreen
   /*enable for fullscreen padding: 30% 25%;*/
   transparency: "real";
   background-color: @bgt;
   border-color: @t;
   border-radius: 10px;
-  x-offset: -625px;
-  y-offset: -347px;
+  x-offset: -825px;
+  y-offset: -592px;
 }
 
 listview {
