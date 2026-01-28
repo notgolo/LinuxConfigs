@@ -53,7 +53,7 @@ if [[ "$album" != "$last_album" ]]; then
   if [[ -z "$cover" ]]; then
     cp "$placeholder" "$cover_image"
   else
-    convert "$cover" -resize "250x225>" -alpha off "$cover_image"
+    convert "$cover" -resize "350x300>" -alpha off "$cover_image"
   fi
 
   sync
