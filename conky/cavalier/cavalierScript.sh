@@ -14,10 +14,10 @@ if [ -z "$WINDOW_ID" ]; then
 fi
 
 # Desired geometry
-TARGET_X=32
-TARGET_Y=435
+TARGET_X=1655
+TARGET_Y=815
 TARGET_W=450
-TARGET_H=350
+TARGET_H=300
 
 # Get current geometry: x,y,width,height
 read CUR_X CUR_Y CUR_W CUR_H < <(xdotool getwindowgeometry --shell "$WINDOW_ID" | awk -F= '
