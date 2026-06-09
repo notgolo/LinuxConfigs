@@ -95,7 +95,6 @@
             "K":         MoveUp,
             "D":         Delete,
             "B":         ShowInfo,
-	    "S":	 Save(kind: Modal()),
         },
         queue: {
             "D":       DeleteAll,

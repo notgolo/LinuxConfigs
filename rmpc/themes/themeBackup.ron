@@ -14,7 +14,7 @@
         active_style: (fg: "black", bg: "gray", modifiers: "Bold"),
         inactive_style: (fg: "white"),
     ),
-    highlighted_item_style: (fg: "white"),
+    highlighted_item_style: (fg: "yellow"),
     current_item_style: (fg: "black", bg: "gray", modifiers: "Bold"),
     borders_style: (fg: "gray"),
     highlight_border_style: (fg: "gray"),
